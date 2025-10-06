@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bifani Portfólio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/FotoProfissional.png" alt="Foto de Guilherme" class="foto-perfil">
+        <h1>Guilherme Bifani de Santana</h1>
+        <p class="cabecalho-subtitulo">Desenvolvedor Full Stack</p>
+        <div class="icones-tecnologias">
+            <img src="./img/python.png" alt="Python" class="icone-tec">
+            <img src="./img/javascriptimagem2.png" alt="JavaScript" class="icone-tec">
+            <img src="./img/java.png" alt="Java" class="icone-tec">
+        </div>
+
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Sou Guilherme Bifani, desenvolvedor Full Stack apaixonado por transformar ideias em soluções digitais.
+                Tenho foco em criar aplicações funcionais, rápidas e com design intuitivo, sempre buscando unir
+                performance e boa experiência do usuário.
+                Gosto de aprender novas tecnologias, entender problemas reais e desenvolver projetos que causem impacto
+                positivo. Atualmente, trabalho com JavaScript, Python e Java, mas estou sempre explorando novas
+                ferramentas que ampliem meu repertório técnico e criativo.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <a href="https://jogo-chi-wine.vercel.app/"
+            target="_blank"
+            class="projetos-link">
+                <div class="projetos-card">
+                    <img src="./img/jogo-numero-secreto.png" alt="Projeto 1" class="projetos-imagem">
+
+                    <div class="caixa-textos-projeto">
+                        <h3 class="info-projetos">Jogo do Número Secreto</h3>
+                        <p>Um jogo de adivinhação feito com HTML, CSS e JavaScript, focado em lógica, interatividade e
+                            manipulação do DOM.</p>
+                    </div>
+
+                </div>
+            </a>
+            <a href="https://challenge-amigo-secreto-tan-six.vercel.app/"
+            target="_blank"
+            class="projetos-link">
+                <div class="projetos-card">
+                    <img src="./img/sorteio.png" alt="Projeto 2" class="projetos-imagem">
+
+                    <div class="caixa-textos-projeto">
+                        <h3 class="info-projetos">Amigo Secreto</h3>
+                        <p>Aplicação simples que realiza sorteios automáticos entre participantes, com lógica para
+                            evitar
+                            repetições.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://github.com/Bifaniii/HealthAnalytics-personal-project"
+            target="_blank"
+            class="projetos-link">
+                <div class="projetos-card">
+                    <img src="./img/HAProject.png" alt="Projeto 3" class="projetos-imagem">
+
+                    <div class="caixa-textos-projeto">
+                        <h3 class="info-projetos">Health Analytics</h3>
+                        <p>Projeto voltado à visualização de dados e métricas de saúde, com interface responsiva e foco
+                            na
+                            clareza das informações</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+    </section>
+
+    <script src="./javascript/app.js"></script>
+</body>
+
+</html>
