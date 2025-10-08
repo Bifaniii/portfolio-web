@@ -1,33 +1,43 @@
-🧑‍💻 Portfolio Web
-Este é meu projeto de portfólio pessoal, desenvolvido com HTML, CSS e JavaScript, com o objetivo de apresentar minha trajetória, projetos e habilidades como desenvolvedor em formação.
+# 🧑‍💻 Portfolio Web
 
-🔗 Acesse o projeto online:
-portfolio-web-phi-ecru.vercel.app
+Este é meu projeto de portfólio pessoal, desenvolvido com **HTML**, **CSS** e **JavaScript**, com o objetivo de apresentar minha trajetória, projetos e habilidades como desenvolvedor em formação.
 
-📌 Funcionalidades
-Apresentação pessoal com foco em desenvolvimento backend
+🔗 **Acesse o projeto online:**  
+👉 [portfolio-web-phi-ecru.vercel.app](https://portfolio-web-phi-ecru.vercel.app/)
 
-Seção de projetos com links para o GitHub
+---
 
-Design responsivo para diferentes dispositivos
+## 📌 Funcionalidades
 
-Navegação fluida e estrutura clara
+- Apresentação pessoal com foco em desenvolvimento backend
+- Seção de projetos com links para o GitHub
+- Design responsivo para diferentes dispositivos
+- Navegação fluida e estrutura clara
 
-🛠️ Tecnologias utilizadas
-HTML5
+---
 
-CSS3
+## 🛠️ Tecnologias utilizadas
 
-JavaScript
+- HTML5  
+- CSS3  
+- JavaScript  
+- Git & GitHub  
+- Vercel (deploy)
 
-Git & GitHub
+---
 
-Vercel (deploy)
+## 📈 Objetivo do projeto
 
-📈 Objetivo do projeto
 Este portfólio foi criado para consolidar meus conhecimentos em front-end e servir como vitrine profissional para oportunidades de estágio e networking na área de tecnologia.
 
-📬 Contato
-📧 Email: gbifani.tech@gmail.com
+---
 
-💼 LinkedIn: linkedin.com/in/guilhermebifani
+## 📬 Contato
+
+- 📧 Email: [gbifani.tech@gmail.com](mailto:gbifani.tech@gmail.com)  
+- 💼 LinkedIn: [linkedin.com/in/guilhermebifani](https://www.linkedin.com/in/guilhermebifani)  
+- 📸 Instagram: [@bifaniii](https://www.instagram.com/bifaniii)
+
+---
+
+> Obrigado por visitar meu projeto! Fique à vontade para deixar sugestões ou contribuir.
