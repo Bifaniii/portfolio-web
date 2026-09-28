@@ -26,11 +26,24 @@
   margin-bottom: 28px;
 
   i {
+    flex: none;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+    background: var(--available);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--available) 28%, transparent);
+    animation: pulso 2.4s ease-out infinite;
+  }
+}
+
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--available) 55%, transparent);
+  }
+
+  70%,
+  100% {
+    box-shadow: 0 0 0 7px color-mix(in srgb, var(--available) 0%, transparent);
   }
 }
 

@@ -36,7 +36,7 @@ export const PROFILE = {
   name: 'Guilherme Bifani',
   role: 'Desenvolvedor Backend Java',
   location: 'São Paulo, SP',
-  status: 'Aberto a vagas de Desenvolvedor Java Júnior',
+  status: 'Aberto a vagas de Desenvolvedor Júnior',
   email: 'gbifani.tech@gmail.com',
   github: 'https://github.com/Bifaniii',
   linkedin: 'https://www.linkedin.com/in/guilhermebifani/',
@@ -138,9 +138,9 @@ export const PATH: PathStop[] = [
   {
     title: 'Área da saúde',
     place: 'Biomedicina, Medicina em La Plata e Fisioterapia',
-    note: 'Morei sozinho na Argentina aos 18. Gostava de entender o diagnóstico, não da prática.',
+    note: 'Descobri que o que me atraía era investigar o diagnóstico.',
   },
-  { title: 'Engenharia de Software', place: 'Um semestre, EAD', note: 'Gostei da área, não do formato online.' },
+  { title: 'Engenharia de Software', place: 'Um semestre, EAD', note: 'Confirmou que era essa a área que eu queria.' },
   {
     title: 'Análise e Desenvolvimento de Sistemas',
     place: 'Universidade Cruzeiro do Sul, Santo Amaro',
