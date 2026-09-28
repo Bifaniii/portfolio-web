@@ -28,6 +28,22 @@ import { CERTIFICATIONS, STACK } from '../../data/portfolio.data';
             }
           </ul>
         </div>
+
+        <div class="setup">
+          <div class="terminal" aria-hidden="true">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <pre><span class="p">guilherme&#64;debian:~$</span> lsb_release -d
+Description: Debian GNU/Linux 13 (trixie)
+<span class="p">guilherme&#64;debian:~$</span> nvim .<span class="cursor"></span></pre>
+          </div>
+          <div class="setup-text">
+            <h3>Onde eu programo</h3>
+            <p>
+              No Neovim, rodando no Debian 13. Configurei os dois do meu jeito e é onde me sinto mais à vontade para
+              codar. E não, programar no terminal não me faz um dev das antigas: é preferência mesmo.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   `,
@@ -47,7 +63,7 @@ import { CERTIFICATIONS, STACK } from '../../data/portfolio.data';
       padding: 24px;
     }
 
-    h3 {
+    .group h3 {
       font-family: var(--font-mono);
       font-size: 0.8rem;
       font-weight: 500;
@@ -83,6 +99,84 @@ import { CERTIFICATIONS, STACK } from '../../data/portfolio.data';
         display: flex;
         flex-wrap: wrap;
         gap: 6px 24px;
+      }
+    }
+
+    .setup {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+
+      @media (max-width: 799px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .terminal {
+      background: #140e0c;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+
+      .bar {
+        display: flex;
+        gap: 6px;
+        padding: 10px 14px;
+        border-bottom: 1px solid #2d201b;
+
+        i {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #3e2d25;
+        }
+      }
+
+      pre {
+        margin: 0;
+        padding: 16px 18px 18px;
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        line-height: 1.7;
+        color: #f4e9dd;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+
+      .p {
+        color: #d9a15f;
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 8px;
+        height: 1em;
+        margin-left: 4px;
+        vertical-align: -2px;
+        background: #e26a55;
+        animation: piscar 1.1s steps(2, start) infinite;
+      }
+    }
+
+    .setup-text {
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: var(--muted);
+        max-width: 48ch;
+      }
+    }
+
+    @keyframes piscar {
+      to {
+        visibility: hidden;
       }
     }
   `,

@@ -23,6 +23,16 @@
       margin-top: 16px;
     }
   }
+
+  .closing {
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-left: 18px;
+    border-left: 3px solid var(--accent);
+    margin-top: 24px;
+  }
 }
 
 .path {

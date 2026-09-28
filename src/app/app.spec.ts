@@ -35,6 +35,8 @@ describe('App', () => {
 
     expect(el.querySelectorAll('.path li').length).toBe(PATH.length);
     expect(el.querySelector('.path .current')?.textContent).toContain('Análise e Desenvolvimento de Sistemas');
+    expect(el.querySelector('.setup-text')?.textContent).toContain('Neovim');
+    expect(el.querySelector('.setup-text')?.textContent).toContain('Debian 13');
     for (const book of BOOKS) {
       expect(el.querySelector('.shelf')?.textContent).toContain(book.title);
     }
