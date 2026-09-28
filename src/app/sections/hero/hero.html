@@ -1,28 +1,35 @@
 <section id="inicio" class="hero container">
   <div class="intro">
     <span class="status"><i aria-hidden="true"></i>{{ profile.status }}</span>
-    <h1>{{ profile.name }}</h1>
-    <p class="role">{{ profile.role }} <span>· {{ profile.location }}</span></p>
+    <h1>Guilherme <em>Bifani</em></h1>
+    <p class="role">{{ profile.role }}, em {{ profile.location }}</p>
     <p class="pitch">
-      Faço APIs REST e microsserviços com Java e Spring Boot. Os projetos daqui têm testes rodando no GitHub
-      Actions, e o mais completo tem dois serviços que conversam por REST e RabbitMQ.
+      Passei pela química, pela medicina e pela fisioterapia antes de chegar na programação. O que eu gostava em
+      todas era entender como as coisas funcionam por dentro, e hoje faço isso com Java e Spring Boot.
     </p>
     <div class="cta">
-      <a href="#projetos" class="btn primary">Ver projetos</a>
-      <a [href]="profile.github" target="_blank" rel="noopener" class="btn">GitHub</a>
-      <a [href]="profile.linkedin" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+      <a href="#sobre" class="btn primary">Conhecer minha história</a>
+      <a href="#projetos" class="btn">Ver projetos</a>
     </div>
   </div>
 
   <div class="visual">
-    <img [src]="profile.photo" alt="Foto de Guilherme Bifani" width="640" height="800" fetchpriority="high" />
-    <div class="response" aria-hidden="true">
-      <div class="req"><b>GET</b> /api/guilherme <span>200 OK</span></div>
-      <pre>{{ '{' }}
-  <span class="k">"cargo"</span>: <span class="s">"Backend Java"</span>,
-  <span class="k">"stack"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring"</span>, <span class="s">"Docker"</span>],
-  <span class="k">"disponivel"</span>: <span class="b">true</span>
-{{ '}' }}</pre>
+    <span class="ring" aria-hidden="true"></span>
+    <img [src]="profile.photo" alt="Foto de Guilherme Bifani num café" width="640" height="800" fetchpriority="high" />
+    <div class="ticket" aria-hidden="true">
+      <div class="ticket-head">
+        <span>Comanda</span>
+        <span>Santo Amaro</span>
+      </div>
+      <ul>
+        <li><span>1× Dev Backend Java Jr.</span></li>
+        <li class="sub">Spring Boot, Docker, RabbitMQ</li>
+        <li><span>1× Café</span><span>sempre</span></li>
+      </ul>
+      <div class="ticket-foot">
+        <span>Status</span>
+        <b>disponível</b>
+      </div>
     </div>
   </div>
 </section>

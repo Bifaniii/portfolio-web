@@ -1,0 +1,35 @@
+<section id="sobre" class="section">
+  <div class="container layout">
+    <div class="story">
+      <span class="eyebrow">01 · sobre mim</span>
+      <h2 class="section-title">Um caminho <em>nada reto</em> até o código</h2>
+      <p>
+        Fiz o ensino médio técnico em química na ETEC e comecei biomedicina em plena pandemia, online. Tranquei depois
+        de um mês. Passei o ano seguinte estudando espanhol, fui aprovado em medicina na Universidad Nacional de La Plata
+        e, com 18 anos, fui morar sozinho na Argentina. Voltei uns seis meses depois, por documentação e dinheiro.
+      </p>
+      <p>
+        No Brasil fiz dois anos e meio de fisioterapia. Eu gostava de entender como se chega a um diagnóstico, mas não
+        gostava da prática da área. Já programava um pouco em Python por curiosidade e tinha muitos amigos em TI, então
+        resolvi arriscar: um semestre de engenharia de software a distância me mostrou que eu queria a área, só não
+        daquele jeito.
+      </p>
+      <p>
+        Hoje estou no terceiro de quatro semestres de Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul e sou
+        estagiário de TI na Object Data, uma empresa com ERP próprio. No backend eu continuo fazendo o que sempre
+        gostei: descobrir como um sistema funciona e por que ele quebra.
+      </p>
+    </div>
+
+    <ol class="path" aria-label="Minha trajetória">
+      @for (stop of path; track stop.title) {
+        <li [class.current]="stop.current">
+          <span class="dot" aria-hidden="true"></span>
+          <h3>{{ stop.title }}</h3>
+          <span class="place">{{ stop.place }}</span>
+          <p>{{ stop.note }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

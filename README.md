@@ -2,9 +2,9 @@
 
 ![CI](https://github.com/Bifaniii/portfolio-web/actions/workflows/ci.yml/badge.svg)
 
-Meu site pessoal, no ar em [portfolio-web-phi-ecru.vercel.app](https://portfolio-web-phi-ecru.vercel.app). Mostra meus projetos de backend em Java, a stack que uso e um formulário que abre uma conversa no WhatsApp.
+Meu site pessoal, no ar em [portfolio-web-phi-ecru.vercel.app](https://portfolio-web-phi-ecru.vercel.app). Conta um pouco da minha história até a programação e mostra meus projetos de backend em Java, a stack que uso e o que eu curto fora do código. O contato é por um formulário que abre uma conversa no WhatsApp.
 
-A primeira versão era em HTML, CSS e JavaScript puro, de quando comecei a programar. Esta é em Angular 22 com TypeScript: componentes standalone, signals e sem zone.js. Tem tema claro e escuro, que segue o sistema até você escolher um.
+A primeira versão era em HTML, CSS e JavaScript puro, de quando comecei a programar. Esta é em Angular 22 com TypeScript: componentes standalone, signals e sem zone.js. A paleta puxa para café: espresso no tema escuro e latte no claro, com o vermelho da cereja do café como destaque. O tema segue o sistema até você escolher um.
 
 ## Como rodar
 
@@ -17,7 +17,7 @@ npm run build    # gera dist/portfolio-web/browser
 
 ## Onde mexer
 
-Todo o conteúdo (projetos, stack, trajetória e contatos) fica em `src/app/data/portfolio.data.ts`. Para incluir um projeto, basta acrescentar um item no array `PROJECTS`; o card e a contagem de testes se ajustam sozinhos.
+Todo o conteúdo (trajetória, projetos, stack, livros e contatos) fica em `src/app/data/portfolio.data.ts`. Para incluir um projeto, basta acrescentar um item no array `PROJECTS`; o card e a contagem de testes se ajustam sozinhos.
 
 As seções ficam em `src/app/sections/`, uma pasta por seção. As cores dos dois temas são variáveis CSS no topo de `src/styles.scss`.
 

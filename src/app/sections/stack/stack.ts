@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { STACK } from '../../data/portfolio.data';
+import { CERTIFICATIONS, STACK } from '../../data/portfolio.data';
 
 @Component({
   selector: 'app-stack',
   template: `
     <section id="stack" class="section">
       <div class="container">
-        <span class="eyebrow">// stack</span>
-        <h2 class="section-title">Com o que eu trabalho</h2>
+        <span class="eyebrow">03 · stack</span>
+        <h2 class="section-title">Com o que eu <em>trabalho</em></h2>
         <div class="groups">
           @for (group of groups; track group.title) {
             <div class="group">
@@ -19,6 +19,14 @@ import { STACK } from '../../data/portfolio.data';
               </ul>
             </div>
           }
+        </div>
+        <div class="certs">
+          <span>Certificações</span>
+          <ul>
+            @for (cert of certifications; track cert) {
+              <li>{{ cert }}</li>
+            }
+          </ul>
         </div>
       </div>
     </section>
@@ -55,8 +63,31 @@ import { STACK } from '../../data/portfolio.data';
       display: grid;
       gap: 6px;
     }
+
+    .certs {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      align-items: baseline;
+
+      span {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--warm);
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 24px;
+      }
+    }
   `,
 })
 export class Stack {
   protected readonly groups = STACK;
+  protected readonly certifications = CERTIFICATIONS;
 }

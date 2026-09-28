@@ -78,7 +78,7 @@
 
 .card-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
@@ -100,20 +100,9 @@
   .links {
     display: flex;
     gap: 16px;
-    margin-left: auto;
   }
 }
 
-.tests {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--muted);
-
-  &::before {
-    content: '✓ ';
-    color: var(--accent);
-  }
-}
 
 .diagram {
   margin: 0;

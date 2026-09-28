@@ -1,18 +1,19 @@
 :root {
-  --bg: #101214;
-  --surface: #171a1d;
-  --surface-2: #1e2226;
-  --border: #2a2f34;
-  --text: #ecebe7;
-  --muted: #9ba1a6;
-  --accent: #8fd694;
-  --accent-strong: #b5e8b9;
-  --accent-ink: #0f1f11;
-  --warm: #f2b366;
-  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+  /* Espresso: fundo torrado, texto creme, vermelho da cereja do café e caramelo. */
+  --bg: #1a1210;
+  --surface: #231815;
+  --surface-2: #2d201b;
+  --border: #3e2d25;
+  --text: #f4e9dd;
+  --muted: #c2a998;
+  --accent: #d4513d;
+  --accent-strong: #e26a55;
+  --accent-ink: #1a0d09;
+  --warm: #d9a15f;
+  --shadow: 0 1px 0 rgba(255, 235, 215, 0.03), 0 24px 44px -26px rgba(0, 0, 0, 0.7);
 
-  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   --radius: 14px;
@@ -21,17 +22,18 @@
 }
 
 @mixin light-tokens {
-  --bg: #f5f3ee;
-  --surface: #ffffff;
-  --surface-2: #efece5;
-  --border: #dedad1;
-  --text: #16181b;
-  --muted: #5c6168;
-  --accent: #2e7d38;
-  --accent-strong: #1f5c27;
+  /* Latte: papel creme, texto café e vermelho mais escuro para manter contraste. */
+  --bg: #f5ece1;
+  --surface: #fffaf4;
+  --surface-2: #efe2d3;
+  --border: #e0cdb9;
+  --text: #2b1a13;
+  --muted: #7b5e4f;
+  --accent: #a3281a;
+  --accent-strong: #7e1d12;
   --accent-ink: #ffffff;
-  --warm: #b86a12;
-  --shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 18px 36px -24px rgba(40, 30, 10, 0.25);
+  --warm: #9b5f1f;
+  --shadow: 0 1px 0 rgba(60, 30, 10, 0.03), 0 20px 38px -26px rgba(80, 40, 15, 0.35);
   color-scheme: light;
 }
 
@@ -61,8 +63,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -71,9 +73,17 @@ h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.08;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
+}
+
+em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
 }
 
 p {
@@ -110,9 +120,10 @@ img {
 
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-  letter-spacing: 0.02em;
+  font-size: 0.78rem;
+  color: var(--warm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   margin-bottom: 12px;
   display: block;
 }
@@ -139,6 +150,7 @@ img {
   gap: 8px;
   padding: 11px 18px;
   border-radius: 10px;
+  font-family: inherit;
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;

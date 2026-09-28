@@ -9,7 +9,6 @@ export interface Project {
   summary: string;
   highlights: string[];
   stack: string[];
-  tests?: number;
   repo: string;
   demo?: Link;
   tag?: string;
@@ -21,10 +20,16 @@ export interface StackGroup {
   items: string[];
 }
 
-export interface JourneyItem {
-  when: string;
+export interface PathStop {
   title: string;
-  description: string;
+  place: string;
+  note: string;
+  current?: boolean;
+}
+
+export interface Book {
+  title: string;
+  author: string;
 }
 
 export const PROFILE = {
@@ -52,7 +57,6 @@ export const PROJECTS: Project[] = [
       'Recuperação de senha por e-mail com token de uso único',
     ],
     stack: ['Java 17', 'Spring Boot', 'RabbitMQ', 'MySQL', 'Docker Compose', 'JWT'],
-    tests: 51,
     repo: 'https://github.com/Bifaniii/mobile-house-task-manager-java',
     tag: 'Microsserviços',
     featured: true,
@@ -68,7 +72,6 @@ export const PROJECTS: Project[] = [
       'Nada é apagado: registros saem de uso por desativação',
     ],
     stack: ['Spring Boot', 'Spring Security', 'Flyway', 'MySQL', 'Angular'],
-    tests: 31,
     repo: 'https://github.com/Bifaniii/Octopus',
     demo: { label: 'Front em Angular', url: 'https://octopus-front-delta.vercel.app' },
     tag: 'Em equipe',
@@ -79,7 +82,6 @@ export const PROJECTS: Project[] = [
     summary: 'API de tarefas em que cada usuário só enxerga e altera as próprias tarefas.',
     highlights: ['Login com JWT e senha em BCrypt', 'Swagger com autenticação', 'Erros padronizados num handler global'],
     stack: ['Spring Boot', 'Spring Security', 'MySQL', 'Swagger'],
-    tests: 25,
     repo: 'https://github.com/Bifaniii/task-manager-java',
   },
   {
@@ -88,7 +90,6 @@ export const PROJECTS: Project[] = [
     summary: 'Pacientes, médicos e consultas. Consulta só em data futura, senha nunca volta na resposta.',
     highlights: ['Herança JPA entre usuário, médico e paciente', '404 e 400 com corpo padronizado'],
     stack: ['Spring Boot', 'JPA', 'Spring Security', 'PostgreSQL'],
-    tests: 27,
     repo: 'https://github.com/Bifaniii/Clinica-Java',
   },
   {
@@ -97,7 +98,6 @@ export const PROJECTS: Project[] = [
     summary: 'Planos de assinatura (Basic, Premium, VIP) com validade de um mês, rodando em Docker.',
     highlights: ['JWT com jjwt', 'API e banco sobem juntos pelo Docker Compose'],
     stack: ['Spring Boot', 'PostgreSQL', 'Docker', 'JWT'],
-    tests: 20,
     repo: 'https://github.com/Bifaniii/subscriptions-java',
   },
   {
@@ -106,7 +106,6 @@ export const PROJECTS: Project[] = [
     summary: 'Cadastro de produtos de um mercadinho, com filtro por categoria e atualização parcial.',
     highlights: ['PATCH que só altera os campos enviados', 'Usuários com perfil e senha em BCrypt'],
     stack: ['Spring Boot', 'PostgreSQL', 'Spring Security'],
-    tests: 19,
     repo: 'https://github.com/Bifaniii/market-api-java',
   },
 ];
@@ -134,26 +133,31 @@ export const STACK: StackGroup[] = [
   { title: 'Front-end', items: ['Angular', 'TypeScript', 'React', 'HTML e CSS'] },
 ];
 
-export const JOURNEY: JourneyItem[] = [
+export const PATH: PathStop[] = [
+  { title: 'Técnico em Química', place: 'ETEC Raposo Tavares', note: 'Ensino médio integrado ao técnico.' },
+  { title: 'Biomedicina', place: 'FMU Santo Amaro', note: 'Um mês, online, em plena pandemia. Tranquei.' },
   {
-    when: 'Agora',
-    title: 'Estagiário de TI · suporte a sistemas ERP',
-    description:
-      'Suporte a sistemas de gestão no dia a dia, enquanto faço a transição para desenvolvimento backend.',
+    title: 'Medicina',
+    place: 'Universidad Nacional de La Plata, Argentina',
+    note: 'Estudei espanhol por um ano, passei e fui morar sozinho lá aos 18. Voltei depois de uns seis meses.',
   },
+  { title: 'Fisioterapia', place: 'Dois anos e meio', note: 'Gostava de entender o diagnóstico, não da prática.' },
+  { title: 'Engenharia de Software', place: 'Um semestre, EAD', note: 'Gostei da área, não do formato online.' },
   {
-    when: 'Em curso',
     title: 'Análise e Desenvolvimento de Sistemas',
-    description: 'Graduação. O Octopus e o Fly AI saíram de disciplinas do curso.',
+    place: 'Universidade Cruzeiro do Sul, Santo Amaro',
+    note: 'No 3º de 4 semestres, junto com o estágio de TI na Object Data.',
+    current: true,
   },
-  {
-    when: '2025',
-    title: 'Oracle Cloud Infrastructure Foundations Associate',
-    description: 'Certificação de fundamentos de nuvem da Oracle.',
-  },
-  {
-    when: 'Estudando',
-    title: 'Alura · Cloud Security',
-    description: 'AWS, Azure e GCP com foco em segurança e criptografia.',
-  },
+];
+
+export const CERTIFICATIONS: string[] = [
+  'Oracle Cloud Infrastructure (OCI) 2025 Foundations Associate',
+  'Cloud Security, Alura (cursando)',
+];
+
+export const BOOKS: Book[] = [
+  { title: 'Fahrenheit 451', author: 'Ray Bradbury' },
+  { title: 'A Biblioteca da Meia-Noite', author: 'Matt Haig' },
+  { title: 'O Projeto Rosie', author: 'Graeme Simsion' },
 ];

@@ -1,9 +1,9 @@
 <section id="projetos" class="section">
   <div class="container">
-    <span class="eyebrow">// projetos</span>
-    <h2 class="section-title">O que eu já construí</h2>
+    <span class="eyebrow">02 · projetos</span>
+    <h2 class="section-title">O que eu já <em>construí</em></h2>
     <p class="lead">
-      Somando os projetos abaixo são {{ totalTests() }} testes automatizados. O GitHub Actions roda todos a cada push.
+      Alguns sozinho, um em equipe na faculdade. Todos têm testes automatizados e rodam no GitHub Actions a cada push.
     </p>
 
     @if (featured; as p) {
@@ -23,7 +23,6 @@
             }
           </div>
           <div class="card-footer">
-            <span class="tests">{{ p.tests }} testes</span>
             <a [href]="p.repo" target="_blank" rel="noopener">Ver código ↗</a>
           </div>
         </div>
@@ -85,9 +84,6 @@
             }
           </div>
           <div class="card-footer">
-            @if (p.tests) {
-              <span class="tests">{{ p.tests }} testes</span>
-            }
             <span class="links">
               @if (p.demo) {
                 <a [href]="p.demo.url" target="_blank" rel="noopener">{{ p.demo.label }} ↗</a>

@@ -3,13 +3,14 @@ import { Header } from './sections/header/header';
 import { Hero } from './sections/hero/hero';
 import { Projects } from './sections/projects/projects';
 import { Stack } from './sections/stack/stack';
-import { Journey } from './sections/journey/journey';
+import { About } from './sections/about/about';
+import { Offline } from './sections/offline/offline';
 import { Contact } from './sections/contact/contact';
 import { PROFILE } from './data/portfolio.data';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Hero, Projects, Stack, Journey, Contact],
+  imports: [Header, Hero, About, Projects, Stack, Offline, Contact],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

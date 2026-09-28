@@ -11,9 +11,9 @@ export class Header {
   protected readonly menuOpen = signal(false);
 
   protected readonly links = [
+    { href: '#sobre', label: 'Sobre' },
     { href: '#projetos', label: 'Projetos' },
     { href: '#stack', label: 'Stack' },
-    { href: '#trajetoria', label: 'Trajetória' },
     { href: '#contato', label: 'Contato' },
   ];
 }
