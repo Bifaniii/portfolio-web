@@ -1,43 +1,26 @@
-# 🧑‍💻 Portfolio Web
+# Portfólio
 
-Este é meu projeto de portfólio pessoal, desenvolvido com **HTML**, **CSS** e **JavaScript**, com o objetivo de apresentar minha trajetória, projetos e habilidades como desenvolvedor em formação.
+![CI](https://github.com/Bifaniii/portfolio-web/actions/workflows/ci.yml/badge.svg)
 
-🔗 **Acesse o projeto online:**  
-👉 [portfolio-web-phi-ecru.vercel.app](https://portfolio-web-phi-ecru.vercel.app/)
+Meu site pessoal, no ar em [portfolio-web-phi-ecru.vercel.app](https://portfolio-web-phi-ecru.vercel.app). Mostra meus projetos de backend em Java, a stack que uso e um formulário que abre uma conversa no WhatsApp.
 
----
+A primeira versão era em HTML, CSS e JavaScript puro, de quando comecei a programar. Esta é em Angular 22 com TypeScript: componentes standalone, signals e sem zone.js. Tem tema claro e escuro, que segue o sistema até você escolher um.
 
-## 📌 Funcionalidades
+## Como rodar
 
-- Apresentação pessoal com foco em desenvolvimento backend
-- Seção de projetos com links para o GitHub
-- Design responsivo para diferentes dispositivos
-- Navegação fluida e estrutura clara
+```bash
+npm install
+npm start        # http://localhost:4200
+npm test         # testes com Vitest
+npm run build    # gera dist/portfolio-web/browser
+```
 
----
+## Onde mexer
 
-## 🛠️ Tecnologias utilizadas
+Todo o conteúdo (projetos, stack, trajetória e contatos) fica em `src/app/data/portfolio.data.ts`. Para incluir um projeto, basta acrescentar um item no array `PROJECTS`; o card e a contagem de testes se ajustam sozinhos.
 
-- HTML5  
-- CSS3  
-- JavaScript  
-- Git & GitHub  
-- Vercel (deploy)
+As seções ficam em `src/app/sections/`, uma pasta por seção. As cores dos dois temas são variáveis CSS no topo de `src/styles.scss`.
 
----
+## Deploy
 
-## 📈 Objetivo do projeto
-
-Este portfólio foi criado para consolidar meus conhecimentos em front-end e servir como vitrine profissional para oportunidades de estágio e networking na área de tecnologia.
-
----
-
-## 📬 Contato
-
-- 📧 Email: [gbifani.tech@gmail.com](mailto:gbifani.tech@gmail.com)  
-- 💼 LinkedIn: [linkedin.com/in/guilhermebifani](https://www.linkedin.com/in/guilhermebifani)  
-- 📸 Instagram: [@bifaniii](https://www.instagram.com/bifaniii)
-
----
-
-> Obrigado por visitar meu projeto! Fique à vontade para deixar sugestões ou contribuir.
+A Vercel faz o build a cada push na `main`, seguindo o `vercel.json`. O GitHub Actions roda os testes e o build no mesmo push.

@@ -1,0 +1,144 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  @media (max-width: 879px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding-top: 40px;
+  }
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 28px;
+
+  i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 800;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  font-weight: 500;
+  margin-top: 12px;
+
+  span {
+    color: var(--muted);
+  }
+}
+
+.pitch {
+  margin-top: 24px;
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.visual {
+  position: relative;
+  max-width: 400px;
+  justify-self: end;
+  width: 100%;
+
+  @media (max-width: 879px) {
+    justify-self: center;
+    max-width: 340px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 22px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+}
+
+.response {
+  position: absolute;
+  left: -48px;
+  bottom: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  box-shadow: var(--shadow);
+  min-width: 260px;
+
+  @media (max-width: 879px) {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+  }
+
+  .req {
+    color: var(--muted);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+
+    b {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    span {
+      float: right;
+      color: var(--accent);
+    }
+  }
+
+  pre {
+    margin: 0;
+    font: inherit;
+    line-height: 1.55;
+    white-space: pre;
+  }
+
+  .k {
+    color: var(--text);
+  }
+
+  .s {
+    color: var(--warm);
+  }
+
+  pre .b {
+    color: var(--accent);
+    font-weight: 500;
+  }
+}

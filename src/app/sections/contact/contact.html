@@ -1,0 +1,44 @@
+<section id="contato" class="section">
+  <div class="container layout">
+    <div>
+      <span class="eyebrow">// contato</span>
+      <h2 class="section-title">Fala comigo</h2>
+      <p class="text">
+        Estou procurando minha primeira vaga como desenvolvedor Java. Se você tem uma oportunidade ou quer conversar
+        sobre algum dos projetos, é só mandar mensagem.
+      </p>
+      <ul class="channels">
+        <li><a [href]="'mailto:' + profile.email">{{ profile.email }}</a></li>
+        <li><a [href]="profile.linkedin" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a [href]="profile.github" target="_blank" rel="noopener">GitHub ↗</a></li>
+      </ul>
+    </div>
+
+    <form class="form" (submit)="send($event)" novalidate>
+      <label>
+        <span>Seu nome</span>
+        <input
+          name="nome"
+          autocomplete="name"
+          [value]="name()"
+          (input)="name.set($any($event.target).value)"
+          [attr.aria-invalid]="submitted() && !name().trim()"
+        />
+      </label>
+      <label>
+        <span>Mensagem</span>
+        <textarea
+          name="mensagem"
+          rows="5"
+          [value]="message()"
+          (input)="message.set($any($event.target).value)"
+          [attr.aria-invalid]="submitted() && !message().trim()"
+        ></textarea>
+      </label>
+      @if (submitted() && !valid()) {
+        <p class="error" role="alert">Preencha seu nome e a mensagem.</p>
+      }
+      <button type="submit" class="btn primary">Enviar pelo WhatsApp</button>
+    </form>
+  </div>
+</section>

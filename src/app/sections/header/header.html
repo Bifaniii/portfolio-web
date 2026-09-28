@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="container bar">
+    <a href="#inicio" class="logo" aria-label="Início">gb<span>.</span></a>
+
+    <nav class="nav" [class.open]="menuOpen()" aria-label="Seções">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" (click)="menuOpen.set(false)">{{ link.label }}</a>
+      }
+    </nav>
+
+    <div class="actions">
+      <button
+        type="button"
+        class="icon-btn"
+        (click)="theme.toggle()"
+        [attr.aria-label]="theme.theme() === 'dark' ? 'Usar tema claro' : 'Usar tema escuro'"
+      >
+        @if (theme.theme() === 'dark') {
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8" /></svg>
+        } @else {
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
+        }
+      </button>
+      <button
+        type="button"
+        class="icon-btn menu-btn"
+        (click)="menuOpen.set(!menuOpen())"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Abrir menu"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,28 @@
+<section id="inicio" class="hero container">
+  <div class="intro">
+    <span class="status"><i aria-hidden="true"></i>{{ profile.status }}</span>
+    <h1>{{ profile.name }}</h1>
+    <p class="role">{{ profile.role }} <span>· {{ profile.location }}</span></p>
+    <p class="pitch">
+      Faço APIs REST e microsserviços com Java e Spring Boot. Os projetos daqui têm testes rodando no GitHub
+      Actions, e o mais completo tem dois serviços que conversam por REST e RabbitMQ.
+    </p>
+    <div class="cta">
+      <a href="#projetos" class="btn primary">Ver projetos</a>
+      <a [href]="profile.github" target="_blank" rel="noopener" class="btn">GitHub</a>
+      <a [href]="profile.linkedin" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="visual">
+    <img [src]="profile.photo" alt="Foto de Guilherme Bifani" width="640" height="800" fetchpriority="high" />
+    <div class="response" aria-hidden="true">
+      <div class="req"><b>GET</b> /api/guilherme <span>200 OK</span></div>
+      <pre>{{ '{' }}
+  <span class="k">"cargo"</span>: <span class="s">"Backend Java"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring"</span>, <span class="s">"Docker"</span>],
+  <span class="k">"disponivel"</span>: <span class="b">true</span>
+{{ '}' }}</pre>
+    </div>
+  </div>
+</section>
