@@ -135,25 +135,22 @@ export const STACK: StackGroup[] = [
 
 export const PATH: PathStop[] = [
   { title: 'Técnico em Química', place: 'ETEC Raposo Tavares', note: 'Ensino médio integrado ao técnico.' },
-  { title: 'Biomedicina', place: 'FMU Santo Amaro', note: 'Um mês, online, em plena pandemia. Tranquei.' },
   {
-    title: 'Medicina',
-    place: 'Universidad Nacional de La Plata, Argentina',
-    note: 'Estudei espanhol por um ano, passei e fui morar sozinho lá aos 18. Voltei depois de uns seis meses.',
+    title: 'Área da saúde',
+    place: 'Biomedicina, Medicina em La Plata e Fisioterapia',
+    note: 'Morei sozinho na Argentina aos 18. Gostava de entender o diagnóstico, não da prática.',
   },
-  { title: 'Fisioterapia', place: 'Dois anos e meio', note: 'Gostava de entender o diagnóstico, não da prática.' },
   { title: 'Engenharia de Software', place: 'Um semestre, EAD', note: 'Gostei da área, não do formato online.' },
   {
     title: 'Análise e Desenvolvimento de Sistemas',
     place: 'Universidade Cruzeiro do Sul, Santo Amaro',
-    note: 'No 3º de 4 semestres, junto com o estágio de TI na Object Data.',
+    note: 'No 3º semestre, junto com o estágio de TI na Object Data.',
     current: true,
   },
 ];
 
 export const CERTIFICATIONS: string[] = [
   'Oracle Cloud Infrastructure (OCI) 2025 Foundations Associate',
-  'Cloud Security, Alura (cursando)',
 ];
 
 export const BOOKS: Book[] = [
