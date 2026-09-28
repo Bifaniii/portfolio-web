@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/Bifaniii/portfolio-web/actions/workflows/ci.yml/badge.svg)
 
-Meu site pessoal, no ar em [portfolio-web-phi-ecru.vercel.app](https://portfolio-web-phi-ecru.vercel.app). Conta um pouco da minha história até a programação e mostra meus projetos de backend em Java, a stack que uso e o que eu curto fora do código. O contato é por um formulário que abre uma conversa no WhatsApp.
+Meu site pessoal, no ar em [guilhermebifani-ecru.vercel.app](https://guilhermebifani-ecru.vercel.app). Conta um pouco da minha história até a programação e mostra meus projetos de backend em Java, a stack que uso e o que eu curto fora do código. O contato é por um formulário que abre uma conversa no WhatsApp.
 
 A primeira versão era em HTML, CSS e JavaScript puro, de quando comecei a programar. Esta é em Angular 22 com TypeScript: componentes standalone, signals e sem zone.js. A paleta puxa para café: espresso no tema escuro e latte no claro, com o vermelho da cereja do café como destaque. O tema segue o sistema até você escolher um.
 
