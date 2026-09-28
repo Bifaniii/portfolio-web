@@ -3,7 +3,7 @@
     <span class="eyebrow">02 · projetos</span>
     <h2 class="section-title">O que eu já <em>construí</em></h2>
     <p class="lead">
-      Alguns sozinho, um em equipe na faculdade. Todos têm testes automatizados e rodam no GitHub Actions a cada push.
+      Alguns sozinho, outros em equipe na faculdade. Todos têm testes automatizados e rodam no GitHub Actions a cada push.
     </p>
 
     @if (featured; as p) {
@@ -30,7 +30,7 @@
           </div>
         </div>
 
-        <figure class="diagram" aria-label="Arquitetura do Octopus: o front em Angular chama três microsserviços. O de usuários emite o JWT e está na AWS; baias e medicações validam o mesmo token. Cada serviço tem seu MySQL com Flyway.">
+        <figure class="diagram" aria-label="Arquitetura do Octopus: o front em Angular chama três microsserviços. O de usuários emite o JWT; baias e medicações validam o mesmo token. Os três rodam na AWS. Cada serviço tem seu MySQL com Flyway.">
           <svg viewBox="0 0 360 300" role="img">
             <defs>
               <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
@@ -43,7 +43,7 @@
 
             <rect x="6" y="118" width="108" height="52" rx="8" class="node strong" />
             <text x="60" y="139" class="label">usuários</text>
-            <text x="60" y="155" class="sub">emite JWT · AWS</text>
+            <text x="60" y="155" class="sub">emite JWT</text>
 
             <rect x="126" y="118" width="108" height="52" rx="8" class="node" />
             <text x="180" y="139" class="label">baias</text>
@@ -63,7 +63,7 @@
             <path d="M180 172v64" class="edge" marker-end="url(#seta)" />
             <path d="M300 172v64" class="edge" marker-end="url(#seta)" />
           </svg>
-          <figcaption>Os três validam o mesmo JWT. Em vermelho, os serviços que eu fiz.</figcaption>
+          <figcaption>Os três rodam na AWS e validam o mesmo JWT. Em vermelho, os que eu fiz.</figcaption>
         </figure>
       </article>
     }

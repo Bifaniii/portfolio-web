@@ -40,7 +40,7 @@ Description: Debian GNU/Linux 13 (trixie)
             <h3>Onde eu programo</h3>
             <p>
               No Neovim, rodando no Debian 13. Configurei os dois do meu jeito e é onde me sinto mais à vontade para
-              codar. E não, programar no terminal não me faz um dev das antigas: é preferência mesmo.
+              codar. E não, programar no terminal não me faz um velho hahahaha, é só preferência mesmo.
             </p>
           </div>
         </div>
