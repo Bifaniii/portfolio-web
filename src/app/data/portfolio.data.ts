@@ -55,7 +55,7 @@ export const PROJECTS: Project[] = [
       'Conduzi o de medicações com outro dev: registro ANVISA único, esquema contínuo ou sintomático e interações proibidas entre medicamentos',
       'Revisava e ajustava o código que o time de backend subia e padronizei os módulos: Flyway, Docker por serviço e desativação no lugar de exclusão',
       'Planejado em cinco sprints, com escopo e regras de negócio num Termo de Abertura e 10 casos de teste oficiais na entrega para a banca',
-      'Os três microsserviços rodam na AWS (deploy feito pelo tech lead, com a minha ajuda) e o front em Angular está na Vercel',
+      'Os três microsserviços rodam na AWS e o front em Angular está na Vercel',
     ],
     stack: ['Java 17', 'Spring Boot', 'Spring Security', 'JWT', 'Flyway', 'MySQL', 'Docker', 'Angular', 'AWS'],
     repo: 'https://github.com/Bifaniii/Octopus',
