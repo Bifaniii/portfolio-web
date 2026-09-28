@@ -46,6 +46,24 @@ export const PROFILE = {
 
 export const PROJECTS: Project[] = [
   {
+    slug: 'octopus',
+    name: 'Octopus · Plantão VidaPet',
+    summary:
+      'Sistema de plantão para uma clínica veterinária, feito em squad na faculdade e organizado em cinco sprints. O objetivo é um painel que mostra, a qualquer hora, as medicações atrasadas e as que vencem na próxima hora. Fiz os microsserviços de usuários e de medicações.',
+    highlights: [
+      'Três microsserviços (usuários, baias e medicações), cada um com seu banco e sua branch',
+      'Só o de usuários emite o JWT; os outros validam o mesmo token e aplicam os perfis com @PreAuthorize',
+      'Schema versionado com Flyway, e nada é apagado: registros saem de uso por desativação',
+      'Regras de negócio e escopo definidos num Termo de Abertura do Projeto',
+      'Módulo de usuários publicado na AWS e front em Angular na Vercel',
+    ],
+    stack: ['Java 17', 'Spring Boot', 'Spring Security', 'JWT', 'Flyway', 'MySQL', 'Docker', 'Angular', 'AWS'],
+    repo: 'https://github.com/Bifaniii/Octopus',
+    demo: { label: 'Ver front em Angular', url: 'https://octopus-front-delta.vercel.app' },
+    tag: 'Em equipe',
+    featured: true,
+  },
+  {
     slug: 'house-task-manager',
     name: 'House Task Manager',
     summary:
@@ -54,27 +72,10 @@ export const PROJECTS: Project[] = [
       'Dois microsserviços com banco próprio: usuários e tarefas',
       'O serviço de tarefas consulta o de usuários por REST, repassando o JWT',
       'Cadastro publica um evento no RabbitMQ; se o broker cair, o cadastro continua',
-      'Recuperação de senha por e-mail com token de uso único',
     ],
-    stack: ['Java 17', 'Spring Boot', 'RabbitMQ', 'MySQL', 'Docker Compose', 'JWT'],
+    stack: ['Spring Boot', 'RabbitMQ', 'MySQL', 'Docker Compose', 'JWT'],
     repo: 'https://github.com/Bifaniii/mobile-house-task-manager-java',
     tag: 'Microsserviços',
-    featured: true,
-  },
-  {
-    slug: 'octopus',
-    name: 'Octopus · Plantão VidaPet',
-    summary:
-      'Projeto em squad na faculdade: painel de medicação e internação de uma clínica veterinária. Fiz o módulo de usuários e o de medicações.',
-    highlights: [
-      'Perfis com @PreAuthorize e JWT validado pelos outros módulos',
-      'Schema versionado com Flyway',
-      'Nada é apagado: registros saem de uso por desativação',
-    ],
-    stack: ['Spring Boot', 'Spring Security', 'Flyway', 'MySQL', 'Angular'],
-    repo: 'https://github.com/Bifaniii/Octopus',
-    demo: { label: 'Front em Angular', url: 'https://octopus-front-delta.vercel.app' },
-    tag: 'Em equipe',
   },
   {
     slug: 'task-manager',
@@ -115,11 +116,6 @@ export const SIDE_PROJECTS: (Link & { description: string })[] = [
     label: 'Fly AI',
     url: 'https://flyai-v4.vercel.app/',
     description: 'Chatbot de viagens com IA, feito em grupo na faculdade.',
-  },
-  {
-    label: 'Config-shell',
-    url: 'https://github.com/Bifaniii/config-shell',
-    description: 'Meu terminal: zsh, Neovim e GNOME no Linux.',
   },
 ];
 

@@ -111,11 +111,18 @@
   padding: 16px;
   display: grid;
   place-items: center;
+  align-content: center;
 
   svg {
     width: 100%;
     max-width: 380px;
     height: auto;
+  }
+
+  figcaption {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: var(--muted);
   }
 
   .node {
