@@ -140,6 +140,13 @@
     }
   }
 
+  .group {
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 5;
+  }
+
   .label {
     fill: var(--text);
     font-family: var(--font-mono);

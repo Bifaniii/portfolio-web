@@ -30,40 +30,47 @@
           </div>
         </div>
 
-        <figure class="diagram" aria-label="Arquitetura do Octopus: o front em Angular chama três microsserviços. O de usuários emite o JWT; baias e medicações validam o mesmo token. Os três rodam na AWS. Cada serviço tem seu MySQL com Flyway.">
-          <svg viewBox="0 0 360 300" role="img">
+        <figure class="diagram" aria-label="Arquitetura do Octopus: o front em Angular chama seis microsserviços (usuários, baias, medicações, internação, prescrição e doses), todos validando o JWT emitido pelo de usuários. A internação consulta baias e usuários por REST e a prescrição agenda as doses no serviço de doses. Cada serviço tem seu MySQL com Flyway.">
+          <svg viewBox="0 0 360 310" role="img">
             <defs>
               <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                 <path d="M0 0 10 5 0 10z" class="arrow-head" />
               </marker>
             </defs>
 
-            <rect x="115" y="12" width="130" height="36" rx="8" class="node" />
-            <text x="180" y="35" class="label">front Angular</text>
+            <rect x="115" y="8" width="130" height="34" rx="8" class="node" />
+            <text x="180" y="30" class="label">front Angular</text>
+            <path d="M180 42v24" class="edge" marker-end="url(#seta)" />
 
-            <rect x="6" y="118" width="108" height="52" rx="8" class="node strong" />
-            <text x="60" y="139" class="label">usuários</text>
-            <text x="60" y="155" class="sub">emite JWT</text>
+            <rect x="4" y="68" width="352" height="166" rx="12" class="group" />
+            <text x="180" y="226" class="edge-label">todos validam o mesmo JWT</text>
+            <rect x="10" y="80" width="100" height="42" rx="8" class="node strong" />
+            <text x="60" y="98" class="label">usuários</text>
+            <text x="60" y="113" class="sub">login e JWT</text>
+            <rect x="130" y="80" width="100" height="42" rx="8" class="node" />
+            <text x="180" y="98" class="label">baias</text>
+            <text x="180" y="113" class="sub">capacidade</text>
+            <rect x="250" y="80" width="100" height="42" rx="8" class="node strong" />
+            <text x="300" y="98" class="label">medicações</text>
+            <text x="300" y="113" class="sub">interações</text>
+            <rect x="10" y="160" width="100" height="42" rx="8" class="node" />
+            <text x="60" y="178" class="label">internação</text>
+            <text x="60" y="193" class="sub">aloca na baia</text>
+            <rect x="130" y="160" width="100" height="42" rx="8" class="node" />
+            <text x="180" y="178" class="label">prescrição</text>
+            <text x="180" y="193" class="sub">agenda as doses</text>
+            <rect x="250" y="160" width="100" height="42" rx="8" class="node" />
+            <text x="300" y="178" class="label">doses</text>
+            <text x="300" y="193" class="sub">aplicação</text>
+            <path d="M95 160 145 124" class="edge dashed" marker-end="url(#seta)" />
+            <path d="M60 158v-34" class="edge dashed" marker-end="url(#seta)" />
+            <path d="M231 181h17" class="edge dashed" marker-end="url(#seta)" />
 
-            <rect x="126" y="118" width="108" height="52" rx="8" class="node" />
-            <text x="180" y="139" class="label">baias</text>
-            <text x="180" y="155" class="sub">valida JWT</text>
-
-            <rect x="246" y="118" width="108" height="52" rx="8" class="node strong" />
-            <text x="300" y="139" class="label">medicações</text>
-            <text x="300" y="155" class="sub">valida JWT</text>
-
-            <rect x="6" y="238" width="348" height="40" rx="20" class="node warm" />
-            <text x="180" y="263" class="label">MySQL + Flyway, um schema por serviço</text>
-
-            <path d="M150 48 72 116" class="edge" marker-end="url(#seta)" />
-            <path d="M180 48v68" class="edge" marker-end="url(#seta)" />
-            <path d="M210 48 288 116" class="edge" marker-end="url(#seta)" />
-            <path d="M60 172v64" class="edge" marker-end="url(#seta)" />
-            <path d="M180 172v64" class="edge" marker-end="url(#seta)" />
-            <path d="M300 172v64" class="edge" marker-end="url(#seta)" />
+            <path d="M180 234v18" class="edge" marker-end="url(#seta)" />
+            <rect x="4" y="254" width="352" height="40" rx="20" class="node warm" />
+            <text x="180" y="279" class="label">MySQL + Flyway, um schema por serviço</text>
           </svg>
-          <figcaption>Os três rodam na AWS e validam o mesmo JWT. Em vermelho, os que eu fiz.</figcaption>
+          <figcaption>Tracejado: chamadas REST entre serviços. Em vermelho, os que eu fiz.</figcaption>
         </figure>
       </article>
     }
