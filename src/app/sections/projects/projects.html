@@ -30,6 +30,7 @@
           </div>
         </div>
 
+        <div class="visuals">
         <figure class="diagram" aria-label="Arquitetura do Octopus: o front em Angular chama seis microsserviços (usuários, baias, medicações, internação, prescrição e doses), todos validando o JWT emitido pelo de usuários. A internação consulta baias e usuários por REST e a prescrição agenda as doses no serviço de doses. Cada serviço tem seu MySQL com Flyway.">
           <svg viewBox="0 0 360 310" role="img">
             <defs>
@@ -72,6 +73,13 @@
           </svg>
           <figcaption>Tracejado: chamadas REST entre serviços. Em vermelho, os que eu fiz.</figcaption>
         </figure>
+          @if (p.screenshot) {
+            <a class="shot" [href]="p.demo?.url" target="_blank" rel="noopener">
+              <span class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><b>clinicavidapet.vercel.app</b></span>
+              <img [src]="p.screenshot.src" [alt]="p.screenshot.alt" width="960" height="600" loading="lazy" />
+            </a>
+          }
+        </div>
       </article>
     }
 

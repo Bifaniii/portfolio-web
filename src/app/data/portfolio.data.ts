@@ -11,6 +11,7 @@ export interface Project {
   stack: string[];
   repo: string;
   demo?: Link;
+  screenshot?: { src: string; alt: string };
   tag?: string;
   featured?: boolean;
 }
@@ -60,6 +61,7 @@ export const PROJECTS: Project[] = [
     stack: ['Java 17', 'Spring Boot', 'Spring Security', 'JWT', 'Flyway', 'MySQL', 'Docker', 'GitHub Actions', 'AWS', 'Angular'],
     repo: 'https://github.com/Bifaniii/Octopus',
     demo: { label: 'Ver front em Angular', url: 'https://clinicavidapet.vercel.app' },
+    screenshot: { src: 'img/octopus-login.webp', alt: 'Tela de login do Plantão VidaPet, o front em Angular do projeto' },
     tag: 'Em equipe · Scrum',
     featured: true,
   },

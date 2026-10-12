@@ -112,7 +112,6 @@
   display: grid;
   place-items: center;
   align-content: center;
-  align-self: start;
 
   svg {
     width: 100%;
@@ -259,5 +258,54 @@
     &:hover b {
       color: var(--accent);
     }
+  }
+}
+
+.visuals {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.shot {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+
+  i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--border);
+  }
+
+  b {
+    margin-left: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--muted);
   }
 }
